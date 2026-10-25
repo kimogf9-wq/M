@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#092d28">
+<meta name="description" content="فندق فرحان في عطبرة - ضيافة سودانية أصيلة، غرف مريحة وخدمة حجز مباشرة عبر واتساب.">
+<title>فندق فرحان | عطبرة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+ --bg:#f7f5ef;--paper:#fffefa;--ink:#172b27;--muted:#6d7b75;--green:#0b5146;
+ --green2:#0d6a59;--gold:#d7b56d;--line:#e8e2d5;--shadow:0 24px 70px #092d2812;
+ --radius:24px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit}
+button,a,input,select{-webkit-tap-highlight-color:transparent}
+button{cursor:pointer}
+.wrap{width:min(1160px,91%);margin-inline:auto}
+.topline{height:4px;background:linear-gradient(90deg,#d7b56d,#f4e2ad,#0b5146,#d7b56d)}
+nav{position:fixed;z-index:50;top:0;inset-inline:0;padding:17px 0;color:white;transition:.35s}
+nav.scrolled{background:#fffefaef;color:var(--ink);backdrop-filter:blur(18px);box-shadow:0 8px 30px #071f1b12;padding:10px 0}
+.navin{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:900;font-size:1.18rem;white-space:nowrap}
+.brandmark{width:43px;height:43px;display:grid;place-items:center;border:1px solid #d7b56d;border-radius:15px;color:#f0d18a;font-size:1.35rem;background:#ffffff0d}
+nav.scrolled .brandmark{background:var(--green);color:var(--gold)}
+.navlinks{display:flex;align-items:center;gap:25px;font-size:.9rem;font-weight:700}
+.navlinks a{opacity:.88;transition:.25s}
+.navlinks a:hover{color:var(--gold);opacity:1}
+.navtools{display:flex;align-items:center;gap:9px}
+.lang{color:inherit;background:#ffffff10;border:1px solid #ffffff60;border-radius:30px;padding:7px 10px;outline:none}
+nav.scrolled .lang{border-color:var(--line);background:white}
+.lang option{color:#111}
+.menuBtn{display:none;border:1px solid #ffffff70;background:#ffffff12;color:inherit;border-radius:12px;width:42px;height:42px;font-size:1.25rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 22px;border:0;border-radius:14px;background:var(--gold);color:#1b2119;font-weight:900;transition:transform .25s,box-shadow .25s;box-shadow:0 10px 25px #d7b56d25}
+.btn:hover{transform:translateY(-3px);box-shadow:0 14px 30px #d7b56d45}
+.btn.green{background:var(--green);color:white;box-shadow:0 10px 25px #0b514625}
+.btn.outline{background:transparent;color:inherit;border:1px solid #ffffff75;box-shadow:none}
+.btn.small{padding:9px 15px;font-size:.86rem;border-radius:12px}
+.hero{position:relative;min-height:790px;min-height:100svh;display:flex;align-items:center;color:white;overflow:hidden;background:#092d28}
+.heroimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 53%;transform:scale(1.035);animation:heroZoom 18s ease-in-out infinite alternate}
+@keyframes heroZoom{to{transform:scale(1.12)}}
+.hero:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#061b18d9 0%,#082d27bd 44%,#082d2791 100%),linear-gradient(0deg,#061b18b9,transparent 65%)}
+.hero:after{content:"";position:absolute;z-index:1;inset:auto 0 0;height:130px;background:linear-gradient(transparent,var(--bg))}
+.heroContent{position:relative;z-index:2;padding-top:110px;padding-bottom:115px;width:min(1160px,91%);margin:auto}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;color:#f1d798;border:1px solid #d7b56d88;background:#102f2b77;padding:8px 15px;border-radius:40px;font-size:.85rem;font-weight:700;backdrop-filter:blur(10px);animation:fadeUp .8s both}
+.eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 14px var(--gold)}
+h1{font-size:clamp(2.8rem,7vw,6rem);line-height:1.17;font-weight:900;max-width:780px;margin:23px 0}
+h1 span{color:#e5c77f}
+.heroText{font-size:clamp(1rem,1.8vw,1.18rem);line-height:2;max-width:600px;color:#f1f4ef;opacity:.94}
+.heroActions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.heroStats{display:flex;flex-wrap:wrap;gap:26px;margin-top:45px}
+.stat{display:flex;align-items:center;gap:11px}
+.statIcon{width:43px;height:43px;border-radius:14px;display:grid;place-items:center;background:#ffffff18;border:1px solid #ffffff30;color:#f0d18a;font-size:1.15rem}
+.stat strong{display:block;font-size:.98rem}
+.stat small{display:block;color:#d6e0da;font-size:.78rem}
+.booking{position:relative;z-index:5;margin-top:-42px}
+.bookingBox{display:grid;grid-template-columns:repeat(3,1fr) auto;gap:13px;align-items:end;background:var(--paper);border:1px solid #e9e0ce;border-radius:23px;padding:20px;box-shadow:var(--shadow)}
+.field label{display:block;font-size:.8rem;color:var(--muted);font-weight:800;margin:0 0 7px}
+.field input,.field select{width:100%;min-width:0;background:#fbfaf6;border:1px solid var(--line);border-radius:12px;padding:12px;color:var(--ink);outline:none}
+.field input:focus,.field select:focus{border-color:var(--green);box-shadow:0 0 0 3px #0b514414}
+.bookingBox .btn{min-height:48px;white-space:nowrap}
+section{padding:100px 0}
+.sectionHead{text-align:center;max-width:700px;margin:0 auto 45px}
+.kicker{color:var(--green2);font-size:.82rem;font-weight:900;letter-spacing:.4px}
+.sectionHead h2{font-size:clamp(1.9rem,4vw,3rem);line-height:1.3;margin:10px 0 13px;font-weight:900}
+.sectionHead p{color:var(--muted);line-height:2}
+.goldline{display:block;width:62px;height:3px;background:var(--gold);border-radius:4px;margin:15px auto 0}
+.aboutGrid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.aboutPhoto{position:relative;min-height:470px}
+.aboutPhoto img{width:100%;height:470px;object-fit:cover;border-radius:28px;box-shadow:var(--shadow)}
+.photoBadge{position:absolute;bottom:24px;inset-inline-start:-15px;background:var(--paper);padding:17px 22px;border-radius:18px;box-shadow:var(--shadow);border:1px solid var(--line)}
+.photoBadge strong{font-size:1.55rem;color:var(--green);display:block}
+.photoBadge span{font-size:.82rem;color:var(--muted)}
+.aboutCopy .kicker{display:block}
+.aboutCopy h2{font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.45;margin:12px 0 18px}
+.aboutCopy p{color:var(--muted);line-height:2.15;margin-bottom:15px}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin:25px 0}
+.check{display:flex;gap:9px;align-items:center;font-size:.91rem;font-weight:800}
+.check span{width:25px;height:25px;flex-shrink:0;display:grid;place-items:center;border-radius:50%;background:#e2eee7;color:var(--green)}
+.roomsSection{background:#efeee7}
+.roomsGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:23px}
+.room{background:var(--paper);border:1px solid #e4dfd3;border-radius:23px;overflow:hidden;transition:.35s;box-shadow:0 8px 28px #142e2407}
+.room:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+.roomPhoto{height:245px;position:relative;overflow:hidden;background:#d9dfd8}
+.roomPhoto img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.room:hover .roomPhoto img{transform:scale(1.07)}
+.roomTag{position:absolute;top:15px;inset-inline-start:15px;background:#fffefaed;color:var(--green);padding:7px 12px;border-radius:30px;font-size:.76rem;font-weight:900}
+.roomBody{padding:23px}
+.roomBody h3{font-size:1.25rem;margin-bottom:8px}
+.roomBody p{font-size:.91rem;color:var(--muted);line-height:1.9;min-height:54px}
+.roomFeatures{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 20px}
+.roomFeatures span{font-size:.76rem;color:#52635b;background:#f0f2ec;padding:6px 9px;border-radius:8px}
+.roomBody .btn{width:100%}
+.amenities{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.amenity{padding:27px 20px;text-align:center;border:1px solid var(--line);border-radius:20px;background:var(--paper);transition:.3s}
+.amenity:hover{transform:translateY(-6px);border-color:#d7b56d}
+.amenityIcon{width:58px;height:58px;display:grid;place-items:center;margin:0 auto 16px;border-radius:18px;background:#e9f0e9;color:var(--green);font-size:1.55rem}
+.amenity h3{font-size:1rem;margin-bottom:7px}
+.amenity p{font-size:.83rem;color:var(--muted);line-height:1.8}
+.gallery{display:grid;grid-template-columns:1.25fr 1fr 1fr;grid-template-rows:210px 210px;gap:14px}
+.gallery button{padding:0;border:0;overflow:hidden;border-radius:18px;background:#dfe5df;position:relative}
+.gallery button:first-child{grid-row:span 2}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.gallery button:hover img{transform:scale(1.07)}
+.gallery button:after{content:"⌕";position:absolute;inset:0;display:grid;place-items:center;background:#092d2833;color:white;font-size:2.2rem;opacity:0;transition:.3s}
+.gallery button:hover:after{opacity:1}
+.ctaBand{position:relative;overflow:hidden;background:linear-gradient(120deg,#092d28,#0b5146);color:white;border-radius:30px;padding:50px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.ctaBand:after{content:"";position:absolute;width:300px;height:300px;border:1px solid #d7b56d40;border-radius:50%;inset-inline-end:-80px;top:-170px;box-shadow:0 0 0 35px #d7b56d09,0 0 0 70px #d7b56d06}
+.ctaBand>div,.ctaBand>a{position:relative;z-index:1}
+.ctaBand h2{font-size:clamp(1.5rem,3vw,2.4rem);margin-bottom:10px}
+.ctaBand p{color:#d6e2dc;line-height:1.9}
+.contactGrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px}
+.contactInfo{background:var(--green);color:white;border-radius:25px;padding:32px}
+.contactInfo h3{font-size:1.5rem;margin-bottom:12px}
+.contactInfo>p{color:#d5e4dc;line-height:1.9;margin-bottom:25px}
+.contactItem{display:flex;gap:13px;align-items:flex-start;margin:20px 0}
+.contactItem i{font-style:normal;width:43px;height:43px;flex-shrink:0;display:grid;place-items:center;border-radius:13px;background:#ffffff17;color:var(--gold);font-size:1.2rem}
+.contactItem b{display:block;margin-bottom:4px}
+.contactItem span{font-size:.9rem;color:#d6e2dc}
+.contactForm{background:var(--paper);border:1px solid var(--line);border-radius:25px;padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.contactForm .field.full{grid-column:1/-1}
+.contactForm textarea{width:100%;min-height:100px;resize:vertical;background:#fbfaf6;border:1px solid var(--line);border-radius:12px;padding:12px;outline:none}
+.contactForm .btn{grid-column:1/-1}
+footer{background:#071f1b;color:white;padding:36px 0 25px}
+.footerTop{display:flex;align-items:center;justify-content:space-between;gap:22px;padding-bottom:25px;border-bottom:1px solid #ffffff20}
+.footerTop p{color:#bdcdc5;font-size:.87rem;margin-top:6px}
+.footerLinks{display:flex;flex-wrap:wrap;gap:18px;color:#dce5df;font-size:.86rem}
+.copyright{text-align:center;padding-top:22px;color:#9eb4a9;font-size:.8rem}
+.waFloat{position:fixed;z-index:60;bottom:22px;inset-inline-end:22px;width:60px;height:60px;border-radius:20px;display:grid;place-items:center;background:#20c76a;color:white;font-size:1.7rem;box-shadow:0 10px 30px #20c76a55;transition:.25s}
+.waFloat:hover{transform:translateY(-4px) rotate(-5deg)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.reveal.visible{opacity:1;transform:none}
+.lightbox{position:fixed;inset:0;background:#03100eeF;z-index:100;display:none;align-items:center;justify-content:center;padding:25px}
+.lightbox.open{display:flex}
+.lightbox img{max-width:min(100%,1100px);max-height:85vh;object-fit:contain;border-radius:12px}
+.lightbox button{position:absolute;top:20px;inset-inline-end:22px;border:0;background:#ffffff20;color:white;border-radius:50%;width:45px;height:45px;font-size:1.5rem}
+.toast{position:fixed;z-index:110;top:95px;left:50%;transform:translate(-50%,-20px);opacity:0;pointer-events:none;background:#fffefa;color:var(--ink);padding:12px 20px;border:1px solid var(--gold);border-radius:14px;box-shadow:var(--shadow);transition:.3s;max-width:90%;text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:900px){
+ .navlinks{gap:13px}.navlinks a{font-size:.82rem}
+ .bookingBox{grid-template-columns:repeat(2,1fr)}
+ .bookingBox .btn{width:100%}
+ .aboutGrid{gap:30px}
+ .roomsGrid{grid-template-columns:repeat(2,1fr)}
+ .amenities{grid-template-columns:repeat(2,1fr)}
+ .gallery{grid-template-rows:170px 170px}
+}
+@media(max-width:680px){
+ nav{padding:12px 0}.brand{font-size:1rem}.brandmark{width:39px;height:39px}
+ .menuBtn{display:block}.navtools .btn{display:none}
+ .navlinks{display:none;position:absolute;top:calc(100% + 5px);inset-inline:4%;padding:14px;background:#fffefa;color:var(--ink);border-radius:18px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch;gap:0}
+ .navlinks.open{display:flex}.navlinks a{display:block;padding:12px 10px;border-bottom:1px solid var(--line);font-size:.95rem}
+ nav .lang{font-size:.78rem;padding:6px 8px}
+ .hero{min-height:790px;min-height:92svh}
+ .heroContent{padding-top:125px;padding-bottom:90px}
+ h1{font-size:clamp(2.5rem,12vw,4.1rem);margin:20px 0}
+ .heroText{font-size:1rem}
+ .heroStats{gap:15px;margin-top:32px}.stat{gap:8px}.statIcon{width:37px;height:37px}
+ .stat strong{font-size:.85rem}.stat small{font-size:.7rem}
+ .booking{margin-top:-27px}.bookingBox{padding:15px;gap:10px;border-radius:19px}
+ .field label{font-size:.75rem}.field input,.field select{padding:10px;font-size:.9rem}
+ .bookingBox .btn{grid-column:1/-1}
+ section{padding:72px 0}
+ .aboutGrid{grid-template-columns:1fr}
+ .aboutPhoto{min-height:330px;order:2}.aboutPhoto img{height:330px}
+ .photoBadge{inset-inline-start:10px;bottom:12px}
+ .checks{gap:11px}.check{font-size:.82rem}
+ .roomsGrid{grid-template-columns:1fr}
+ .roomPhoto{height:240px}
+ .amenities{grid-template-columns:repeat(2,1fr);gap:11px}
+ .amenity{padding:22px 12px}.amenityIcon{width:50px;height:50px}
+ .gallery{grid-template-columns:1fr 1fr;grid-template-rows:180px 140px 140px;gap:9px}
+ .gallery button:first-child{grid-row:span 2}
+ .gallery button:last-child{grid-column:span 2}
+ .ctaBand{padding:30px 23px;align-items:flex-start;flex-direction:column;border-radius:22px}
+ .contactGrid{grid-template-columns:1fr}
+ .contactForm{padding:20px;gap:11px}
+ .footerTop{align-items:flex-start;flex-direction:column}
+ .waFloat{width:54px;height:54px;bottom:16px;inset-inline-end:16px;border-radius:17px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="topline"></div>
+<nav id="nav">
+ <div class="wrap navin">
+  <a class="brand" href="#home"><span class="brandmark">✦</span><span data-i18n="brand">فندق فرحان</span></a>
+  <div class="navlinks" id="navlinks">
+   <a href="#about" data-i18n="navAbout">عن الفندق</a><a href="#rooms" data-i18n="navRooms">الغرف</a><a href="#services" data-i18n="navServices">الخدمات</a><a href="#gallery" data-i18n="navGallery">معرض الصور</a><a href="#contact" data-i18n="navContact">تواصل معنا</a>
+  </div>
+  <div class="navtools">
+   <select class="lang" id="language" aria-label="Language"><option value="ar">العربية</option><option value="en">English</option><option value="fr">Français</option><option value="tr">Türkçe</option><option value="es">Español</option></select>
+   <a class="btn small" href="#booking" data-i18n="bookNow">احجز إقامتك</a>
+   <button class="menuBtn" id="menuBtn" aria-label="القائمة">☰</button>
+  </div>
+ </div>
+</nav>
+
+<header class="hero" id="home">
+ <img class="heroimg" src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=2200&q=90" alt="غرفة فندقية أنيقة" fetchpriority="high">
+ <div class="heroContent">
+  <span class="eyebrow"><i></i><span data-i18n="eyebrow">ضيافة سودانية أصيلة • عطبرة</span></span>
+  <h1 data-i18n-html="heroTitle">إقامتك تبدأ<br>بـ<span>راحة تستحقها</span></h1>
+  <p class="heroText" data-i18n="heroText">مرحباً بك في فندق فرحان، حيث تجتمع الراحة والاهتمام بالتفاصيل وكرم الضيافة السودانية لتجعل إقامتك في عطبرة تجربة جميلة.</p>
+  <div class="heroActions"><a class="btn" href="#booking"><span>✦</span><span data-i18n="heroCta">خطّط لإقامتك</span></a><a class="btn outline" href="#rooms" data-i18n="exploreRooms">اكتشف الغرف</a></div>
+  <div class="heroStats">
+   <div class="stat"><span class="statIcon">⌂</span><div><strong data-i18n="stat1">راحة وهدوء</strong><small data-i18n="stat1s">مساحة للاسترخاء</small></div></div>
+   <div class="stat"><span class="statIcon">✧</span><div><strong data-i18n="stat2">حسن استقبال</strong><small data-i18n="stat2s">ضيافة من القلب</small></div></div>
+   <div class="stat"><span class="statIcon">◷</span><div><strong data-i18n="stat3">حجز مباشر</strong><small data-i18n="stat3s">تواصل سهل وسريع</small></div></div>
+  </div>
+ </div>
+</header>
+
+<div class="booking wrap" id="booking">
+ <form class="bookingBox" id="bookingForm">
+  <div class="field"><label for="checkin" data-i18n="checkin">تاريخ الوصول</label><input id="checkin" type="date" required></div>
+  <div class="field"><label for="checkout" data-i18n="checkout">تاريخ المغادرة</label><input id="checkout" type="date" required></div>
+  <div class="field"><label for="guests" data-i18n="guests">عدد النزلاء</label><select id="guests"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option><option value="5+">5+</option></select></div>
+  <button class="btn green" type="submit" data-i18n="checkAvailability">استفسر عن الحجز ←</button>
+ </form>
+</div>
+
+<section id="about">
+ <div class="wrap aboutGrid">
+  <div class="aboutPhoto reveal"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1100&q=85" alt="واجهة فندق ومسبح" loading="lazy"><div class="photoBadge"><strong>Farhan Hotel</strong><span data-i18n="badgeText">مرحباً بك في عطبرة</span></div></div>
+  <div class="aboutCopy reveal"><span class="kicker" data-i18n="aboutKicker">أهلاً بك في بيتك الثاني</span><h2 data-i18n="aboutTitle">ضيافة تشبه كرم أهل السودان</h2><p data-i18n="aboutP1">في فندق فرحان، نؤمن أن الإقامة المميزة تبدأ بالاهتمام بك. صممنا تجربتنا لتمنحك أجواءً مريحة واستقبالاً ودوداً ومكاناً مناسباً للراحة بعد يوم طويل.</p><p data-i18n="aboutP2">سواء كانت زيارتك للعمل أو لقضاء وقت مع العائلة، يسعدنا استقبال طلبك ومساعدتك في اختيار الغرفة المناسبة.</p>
+   <div class="checks"><div class="check"><span>✓</span><b data-i18n="check1">أجواء مريحة</b></div><div class="check"><span>✓</span><b data-i18n="check2">اهتمام بالتفاصيل</b></div><div class="check"><span>✓</span><b data-i18n="check3">تواصل مباشر</b></div><div class="check"><span>✓</span><b data-i18n="check4">مناسب للأفراد والعائلات</b></div></div>
+   <a class="btn green" href="#contact" data-i18n="contactUs">تواصل معنا</a>
+  </div>
+ </div>
+</section>
+
+<section class="roomsSection" id="rooms">
+ <div class="wrap"><div class="sectionHead reveal"><span class="kicker" data-i18n="roomsKicker">اختر إقامتك</span><h2 data-i18n="roomsTitle">غرف صُممت لراحتك</h2><p data-i18n="roomsIntro">تعرّف على خيارات الإقامة واختر ما يناسب رحلتك. أرسل طلبك مباشرة وسنساعدك في تأكيد التفاصيل.</p><span class="goldline"></span></div>
+  <div class="roomsGrid">
+   <article class="room reveal"><div class="roomPhoto"><img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=85" alt="غرفة فردية" loading="lazy"><span class="roomTag" data-i18n="roomTag1">إقامة مريحة</span></div><div class="roomBody"><h3 data-i18n="room1">الغرفة الفردية</h3><p data-i18n="room1d">اختيار عملي للمسافر الفردي، بأجواء هادئة ومساحة تساعدك على الاسترخاء.</p><div class="roomFeatures"><span data-i18n="featBed">🛏 سرير مريح</span><span data-i18n="featAc">❄ تكييف</span><span data-i18n="featBath">حمام</span></div><button class="btn green chooseRoom" data-room="room1" data-i18n="requestRoom">استفسر عن الغرفة</button></div></article>
+   <article class="room reveal"><div class="roomPhoto"><img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=85" alt="غرفة مزدوجة" loading="lazy"><span class="roomTag" data-i18n="roomTag2">راحة لشخصين</span></div><div class="roomBody"><h3 data-i18n="room2">الغرفة المزدوجة</h3><p data-i18n="room2d">مساحة مناسبة لشخصين، تجمع بين العملية والراحة خلال زيارتك لمدينة عطبرة.</p><div class="roomFeatures"><span data-i18n="featBed2">🛏 سريران</span><span data-i18n="featAc">❄ تكييف</span><span data-i18n="featBath">حمام</span></div><button class="btn green chooseRoom" data-room="room2" data-i18n="requestRoom">استفسر عن الغرفة</button></div></article>
+   <article class="room reveal"><div class="roomPhoto"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=85" alt="جناح عائلي" loading="lazy"><span class="roomTag" data-i18n="roomTag3">مساحة أوسع</span></div><div class="roomBody"><h3 data-i18n="room3">الجناح العائلي</h3><p data-i18n="room3d">خيار لمن يبحث عن مساحة أكبر وخصوصية أكثر خلال الإقامة العائلية.</p><div class="roomFeatures"><span data-i18n="featSpace">مساحة أوسع</span><span data-i18n="featAc">❄ تكييف</span><span data-i18n="featFamily">مناسب للعائلة</span></div><button class="btn green chooseRoom" data-room="room3" data-i18n="requestRoom">استفسر عن الغرفة</button></div></article>
+  </div>
+ </div>
+</section>
+
+<section id="services">
+ <div class="wrap"><div class="sectionHead reveal"><span class="kicker" data-i18n="servicesKicker">تفاصيل تهمك</span><h2 data-i18n="servicesTitle">كل ما يجعل إقامتك أسهل</h2><p data-i18n="servicesIntro">نحرص على تجربة إقامة عملية ومريحة من لحظة التواصل وحتى نهاية الزيارة.</p><span class="goldline"></span></div>
+  <div class="amenities">
+   <article class="amenity reveal"><div class="amenityIcon">❄</div><h3 data-i18n="service1">أجواء مريحة</h3><p data-i18n="service1d">غرف مجهزة لتمنحك الراحة بعد يومك.</p></article>
+   <article class="amenity reveal"><div class="amenityIcon">☕</div><h3 data-i18n="service2">ضيافة سودانية</h3><p data-i18n="service2d">استقبال ودود واهتمام بالضيف.</p></article>
+   <article class="amenity reveal"><div class="amenityIcon">◷</div><h3 data-i18n="service3">تواصل سهل</h3><p data-i18n="service3d">أرسل استفسارك مباشرة عبر واتساب.</p></article>
+   <article class="amenity reveal"><div class="amenityIcon">⌖</div><h3 data-i18n="service4">موقع في عطبرة</h3><p data-i18n="service4d">إقامة مناسبة لزيارتك إلى المدينة.</p></article>
+  </div>
+ </div>
+</section>
+
+<section id="gallery" style="padding-top:10px">
+ <div class="wrap"><div class="sectionHead reveal"><span class="kicker" data-i18n="galleryKicker">لمحة بالصور</span><h2 data-i18n="galleryTitle">اكتشف أجواء الإقامة</h2><p data-i18n="galleryIntro">مجموعة صور توضيحية لأجواء فندقية مريحة.</p><span class="goldline"></span></div>
+  <div class="gallery reveal">
+   <button type="button" aria-label="عرض الصورة"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1100&q=85" alt="فندق" loading="lazy"></button>
+   <button type="button" aria-label="عرض الصورة"><img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=850&q=85" alt="غرفة مريحة" loading="lazy"></button>
+   <button type="button" aria-label="عرض الصورة"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=850&q=85" alt="سرير فندقي" loading="lazy"></button>
+   <button type="button" aria-label="عرض الصورة"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=850&q=85" alt="تصميم داخلي" loading="lazy"></button>
+   <button type="button" aria-label="عرض الصورة"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=850&q=85" alt="إقامة فندقية" loading="lazy"></button>
+  </div>
+ </div>
+</section>
+
+<section style="padding-top:10px">
+ <div class="wrap ctaBand reveal"><div><h2 data-i18n="ctaTitle">عطبرة وجهتك؟ خلينا نساعدك في إقامتك.</h2><p data-i18n="ctaText">أرسل تواريخ زيارتك واستفسر عن الغرف المتاحة بكل سهولة.</p></div><a class="btn" href="#booking" data-i18n="ctaButton">ابدأ الحجز الآن ←</a></div>
+</section>
+
+<section id="contact">
+ <div class="wrap"><div class="sectionHead reveal"><span class="kicker" data-i18n="contactKicker">نحن هنا لمساعدتك</span><h2 data-i18n="contactTitle">تواصل مع فندق فرحان</h2><p data-i18n="contactIntro">للحجز أو الاستفسار، أرسل لنا رسالتك وسنتواصل معك عبر واتساب.</p><span class="goldline"></span></div>
+  <div class="contactGrid">
+   <div class="contactInfo reveal"><h3 data-i18n="contactSideTitle">يسعدنا تواصلك</h3><p data-i18n="contactSideText">تواصل معنا مباشرة بخصوص الغرف، المواعيد، أو أي تفاصيل تحتاج معرفتها قبل الوصول.</p>
+    <div class="contactItem"><i>⌖</i><div><b data-i18n="addressLabel">العنوان</b><span data-i18n="addressText">عطبرة، ولاية نهر النيل، السودان</span></div></div>
+    <div class="contactItem"><i>◷</i><div><b data-i18n="bookingLabel">طلبات الحجز</b><span data-i18n="bookingText">متاح إرسال الاستفسارات عبر واتساب</span></div></div>
+    <div class="contactItem"><i>✉</i><div><b data-i18n="replyLabel">التواصل</b><span data-i18n="replyText">رسالة مباشرة وسهلة</span></div></div>
+   </div>
+   <form class="contactForm reveal" id="contactForm">
+    <div class="field"><label for="name" data-i18n="nameLabel">الاسم</label><input id="name" required placeholder="الاسم"></div>
+    <div class="field"><label for="phone" data-i18n="phoneLabel">رقم التواصل (اختياري)</label><input id="phone" type="tel" placeholder="+249..."></div>
+    <div class="field full"><label for="topic" data-i18n="topicLabel">نوع الاستفسار</label><select id="topic"><option value="booking" data-i18n="topicBooking">حجز غرفة</option><option value="info" data-i18n="topicInfo">استفسار عام</option><option value="family" data-i18n="topicFamily">إقامة عائلية</option></select></div>
+    <div class="field full"><label for="message" data-i18n="messageLabel">رسالتك</label><textarea id="message" placeholder="اكتب تفاصيل طلبك هنا..."></textarea></div>
+    <button class="btn green" type="submit" data-i18n="sendWhatsApp">إرسال عبر واتساب ↗</button>
+   </form>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap"><div class="footerTop"><div><a class="brand" href="#home"><span class="brandmark">✦</span><span data-i18n="brand">فندق فرحان</span></a><p data-i18n="footerText">ضيافة سودانية أصيلة في قلب عطبرة.</p></div><div class="footerLinks"><a href="#about" data-i18n="navAbout">عن الفندق</a><a href="#rooms" data-i18n="navRooms">الغرف</a><a href="#services" data-i18n="navServices">الخدمات</a><a href="#contact" data-i18n="navContact">تواصل معنا</a></div></div><div class="copyright">© <span id="year"></span> <span data-i18n="brand">فندق فرحان</span> — <span data-i18n="rights">جميع الحقوق محفوظة</span></div></div>
+</footer>
+
+<a class="waFloat" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">☏</a>
+<div class="lightbox" id="lightbox"><button id="closeLightbox" aria-label="إغلاق">×</button><img id="lightboxImg" alt="صورة مكبرة"></div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+/* مهم: ضع رقم واتساب الفندق الحقيقي بصيغة دولية دون علامة + أو أصفار البداية. */
+const HOTEL_WHATSAPP = "249000000000";
+
+const translations = {
+ar:{
+ brand:"فندق فرحان",navAbout:"عن الفندق",navRooms:"الغرف",navServices:"الخدمات",navGallery:"معرض الصور",navContact:"تواصل معنا",bookNow:"احجز إقامتك",
+ eyebrow:"ضيافة سودانية أصيلة • عطبرة",heroTitle:'إقامتك تبدأ<br>بـ<span>راحة تستحقها</span>',heroText:"مرحباً بك في فندق فرحان، حيث تجتمع الراحة والاهتمام بالتفاصيل وكرم الضيافة السودانية لتجعل إقامتك في عطبرة تجربة جميلة.",heroCta:"خطّط لإقامتك",exploreRooms:"اكتشف الغرف",stat1:"راحة وهدوء",stat1s:"مساحة للاسترخاء",stat2:"حسن استقبال",stat2s:"ضيافة من القلب",stat3:"حجز مباشر",stat3s:"تواصل سهل وسريع",
+ checkin:"تاريخ الوصول",checkout:"تاريخ المغادرة",guests:"عدد النزلاء",checkAvailability:"استفسر عن الحجز ←",badgeText:"مرحباً بك في عطبرة",
+ aboutKicker:"أهلاً بك في بيتك الثاني",aboutTitle:"ضيافة تشبه كرم أهل السودان",aboutP1:"في فندق فرحان، نؤمن أن الإقامة المميزة تبدأ بالاهتمام بك. صممنا تجربتنا لتمنحك أجواءً مريحة واستقبالاً ودوداً ومكاناً مناسباً للراحة بعد يوم طويل.",aboutP2:"سواء كانت زيارتك للعمل أو لقضاء وقت مع العائلة، يسعدنا استقبال طلبك ومساعدتك في اختيار الغرفة المناسبة.",check1:"أجواء مريحة",check2:"اهتمام بالتفاصيل",check3:"تواصل مباشر",check4:"مناسب للأفراد والعائلات",contactUs:"تواصل معنا",
+ roomsKicker:"اختر إقامتك",roomsTitle:"غرف صُممت لراحتك",roomsIntro:"تعرّف على خيارات الإقامة واختر ما يناسب رحلتك. أرسل طلبك مباشرة وسنساعدك في تأكيد التفاصيل.",roomTag1:"إقامة مريحة",roomTag2:"راحة لشخصين",roomTag3:"مساحة أوسع",room1:"الغرفة الفردية",room1d:"اختيار عملي للمسافر الفردي، بأجواء هادئة ومساحة تساعدك على الاسترخاء.",room2:"الغرفة المزدوجة",room2d:"مساحة مناسبة لشخصين، تجمع بين العملية والراحة خلال زيارتك لمدينة عطبرة.",room3:"الجناح العائلي",room3d:"خيار لمن يبحث عن مساحة أكبر وخصوصية أكثر خلال الإقامة العائلية.",featBed:"🛏 سرير مريح",featBed2:"🛏 سريران",featAc:"❄ تكييف",featBath:"حمام",featSpace:"مساحة أوسع",featFamily:"مناسب للعائلة",requestRoom:"استفسر عن الغرفة",
+ servicesKicker:"تفاصيل تهمك",servicesTitle:"كل ما يجعل إقامتك أسهل",servicesIntro:"نحرص على تجربة إقامة عملية ومريحة من لحظة التواصل وحتى نهاية الزيارة.",service1:"أجواء مريحة",service1d:"غرف مجهزة لتمنحك الراحة بعد يومك.",service2:"ضيافة سودانية",service2d:"استقبال ودود واهتمام بالضيف.",service3:"تواصل سهل",service3d:"أرسل استفسارك مباشرة عبر واتساب.",service4:"موقع في عطبرة",service4d:"إقامة مناسبة لزيارتك إلى المدينة.",
+ galleryKicker:"لمحة بالصور",galleryTitle:"اكتشف أجواء الإقامة",galleryIntro:"مجموعة صور توضيحية لأجواء فندقية مريحة.",ctaTitle:"عطبرة وجهتك؟ خلينا نساعدك في إقامتك.",ctaText:"أرسل تواريخ زيارتك واستفسر عن الغرف المتاحة بكل سهولة.",ctaButton:"ابدأ الحجز الآن ←",
+ contactKicker:"نحن هنا لمساعدتك",contactTitle:"تواصل مع فندق فرحان",contactIntro:"للحجز أو الاستفسار، أرسل لنا رسالتك وسنتواصل معك عبر واتساب.",contactSideTitle:"يسعدنا تواصلك",contactSideText:"تواصل معنا مباشرة بخصوص الغرف، المواعيد، أو أي تفاصيل تحتاج معرفتها قبل الوصول.",addressLabel:"العنوان",addressText:"عطبرة، ولاية نهر النيل، السودان",bookingLabel:"طلبات الحجز",bookingText:"متاح إرسال الاستفسارات عبر واتساب",replyLabel:"التواصل",replyText:"رسالة مباشرة وسهلة",nameLabel:"الاسم",phoneLabel:"رقم التواصل (اختياري)",topicLabel:"نوع الاستفسار",topicBooking:"حجز غرفة",topicInfo:"استفسار عام",topicFamily:"إقامة عائلية",messageLabel:"رسالتك",sendWhatsApp:"إرسال عبر واتساب ↗",footerText:"ضيافة سودانية أصيلة في قلب عطبرة.",rights:"جميع الحقوق محفوظة",
+ msgBooking:"السلام عليكم، أود الاستفسار عن حجز في فندق فرحان.\nتاريخ الوصول: ",msgOut:"\nتاريخ المغادرة: ",msgGuests:"\nعدد النزلاء: ",msgRoom:"السلام عليكم، أود الاستفسار عن ",msgName:"\nالاسم: ",msgPhone:"\nرقم التواصل: ",msgTopic:"\nنوع الاستفسار: ",msgText:"\nالتفاصيل: ",topicNames:{booking:"حجز غرفة",info:"استفسار عام",family:"إقامة عائلية"},dateError:"يرجى اختيار تاريخ مغادرة بعد تاريخ الوصول.",fillName:"يرجى كتابة الاسم أولاً."
+},
+en:{
+ brand:"Farhan Hotel",navAbout:"About",navRooms:"Rooms",navServices:"Services",navGallery:"Gallery",navContact:"Contact",bookNow:"Book Your Stay",eyebrow:"Authentic Sudanese Hospitality • Atbara",heroTitle:'Your stay begins<br>with <span>deserved comfort</span>',heroText:"Welcome to Farhan Hotel, where comfort, thoughtful details and warm Sudanese hospitality come together for a pleasant stay in Atbara.",heroCta:"Plan Your Stay",exploreRooms:"Explore Rooms",stat1:"Comfort & Calm",stat1s:"Space to unwind",stat2:"Warm Welcome",stat2s:"Hospitality from the heart",stat3:"Direct Booking",stat3s:"Easy, quick contact",checkin:"Check-in date",checkout:"Check-out date",guests:"Guests",checkAvailability:"Ask About Booking →",badgeText:"Welcome to Atbara",
+ aboutKicker:"Welcome to your second home",aboutTitle:"Hospitality inspired by Sudanese warmth",aboutP1:"At Farhan Hotel, we believe a memorable stay begins with caring for our guests. We aim to offer a comfortable atmosphere, a friendly welcome and a restful place after a long day.",aboutP2:"Whether you are visiting for business or with family, we are happy to receive your request and help you choose a suitable room.",check1:"Comfortable atmosphere",check2:"Thoughtful details",check3:"Direct contact",check4:"For solo travelers & families",contactUs:"Contact Us",
+ roomsKicker:"Choose your stay",roomsTitle:"Rooms designed around comfort",roomsIntro:"Explore the accommodation options and choose what suits your trip. Send a request and we will help confirm the details.",roomTag1:"A comfortable stay",roomTag2:"Comfort for two",roomTag3:"Extra space",room1:"Single Room",room1d:"A practical choice for solo travelers, with a calm atmosphere and space to relax.",room2:"Double Room",room2d:"A comfortable option for two guests during your visit to Atbara.",room3:"Family Suite",room3d:"An option for guests seeking more space and privacy for a family stay.",featBed:"🛏 Comfortable bed",featBed2:"🛏 Two beds",featAc:"❄ Air conditioning",featBath:"Bathroom",featSpace:"Extra space",featFamily:"Family friendly",requestRoom:"Ask About This Room",
+ servicesKicker:"The details that matter",servicesTitle:"A smoother, more comfortable stay",servicesIntro:"We aim to make your stay convenient from your first message until the end of your visit.",service1:"Comfortable setting",service1d:"Rooms intended to help you relax.",service2:"Sudanese hospitality",service2d:"A warm welcome and thoughtful service.",service3:"Easy contact",service3d:"Send your inquiry directly through WhatsApp.",service4:"Located in Atbara",service4d:"A convenient base for your city visit.",
+ galleryKicker:"A visual glimpse",galleryTitle:"Explore the stay",galleryIntro:"Illustrative photos of comfortable hotel-style spaces.",ctaTitle:"Coming to Atbara? Let us help with your stay.",ctaText:"Share your travel dates and ask about room availability.",ctaButton:"Start Booking →",
+ contactKicker:"We are here to help",contactTitle:"Contact Farhan Hotel",contactIntro:"For bookings or inquiries, send us a message through WhatsApp.",contactSideTitle:"We would love to hear from you",contactSideText:"Contact us about rooms, dates or anything you would like to know before arrival.",addressLabel:"Address",addressText:"Atbara, River Nile State, Sudan",bookingLabel:"Booking requests",bookingText:"Inquiries can be sent through WhatsApp",replyLabel:"Contact",replyText:"Direct and simple messaging",nameLabel:"Name",phoneLabel:"Contact number (optional)",topicLabel:"Inquiry type",topicBooking:"Room booking",topicInfo:"General inquiry",topicFamily:"Family stay",messageLabel:"Your message",sendWhatsApp:"Send via WhatsApp ↗",footerText:"Authentic Sudanese hospitality in the heart of Atbara.",rights:"All rights reserved",
+ msgBooking:"Hello, I would like to ask about booking at Farhan Hotel.\nCheck-in: ",msgOut:"\nCheck-out: ",msgGuests:"\nGuests: ",msgRoom:"Hello, I would like to ask about ",msgName:"\nName: ",msgPhone:"\nContact number: ",msgTopic:"\nInquiry type: ",msgText:"\nDetails: ",topicNames:{booking:"Room booking",info:"General inquiry",family:"Family stay"},dateError:"Please select a check-out date after check-in.",fillName:"Please enter your name first."
+},
+fr:{
+ brand:"Hôtel Farhan",navAbout:"À propos",navRooms:"Chambres",navServices:"Services",navGallery:"Galerie",navContact:"Contact",bookNow:"Réserver",eyebrow:"Hospitalité soudanaise • Atbara",heroTitle:'Votre séjour commence<br>par le <span>confort</span>',heroText:"Bienvenue à l'hôtel Farhan, où le confort et l'hospitalité soudanaise rendent votre séjour à Atbara agréable.",heroCta:"Préparer le séjour",exploreRooms:"Voir les chambres",stat1:"Calme et confort",stat1s:"Un espace pour se détendre",stat2:"Accueil chaleureux",stat2s:"Une hospitalité sincère",stat3:"Réservation directe",stat3s:"Contact simple et rapide",checkin:"Arrivée",checkout:"Départ",guests:"Voyageurs",checkAvailability:"Demander une réservation →",badgeText:"Bienvenue à Atbara",
+ aboutKicker:"Bienvenue chez vous",aboutTitle:"L'hospitalité chaleureuse du Soudan",aboutP1:"À l'hôtel Farhan, nous souhaitons offrir une atmosphère confortable, un accueil amical et un lieu reposant après une longue journée.",aboutP2:"Pour un voyage professionnel ou en famille, envoyez-nous votre demande et nous vous aiderons à choisir une chambre.",check1:"Atmosphère confortable",check2:"Souci du détail",check3:"Contact direct",check4:"Pour voyageurs et familles",contactUs:"Nous contacter",
+ roomsKicker:"Choisissez votre séjour",roomsTitle:"Des chambres pour votre confort",roomsIntro:"Découvrez les options et envoyez-nous votre demande pour confirmer les détails.",roomTag1:"Séjour confortable",roomTag2:"Pour deux personnes",roomTag3:"Plus d'espace",room1:"Chambre simple",room1d:"Un choix pratique pour un voyageur seul, dans une atmosphère calme.",room2:"Chambre double",room2d:"Une option confortable pour deux personnes à Atbara.",room3:"Suite familiale",room3d:"Une option pour les familles qui recherchent plus d'espace et d'intimité.",featBed:"🛏 Lit confortable",featBed2:"🛏 Deux lits",featAc:"❄ Climatisation",featBath:"Salle de bain",featSpace:"Plus d'espace",featFamily:"Adaptée aux familles",requestRoom:"Demander cette chambre",
+ servicesKicker:"Les détails importants",servicesTitle:"Un séjour plus facile",servicesIntro:"Nous souhaitons faciliter votre séjour du premier contact à votre départ.",service1:"Cadre confortable",service1d:"Des chambres pour se détendre.",service2:"Hospitalité soudanaise",service2d:"Un accueil chaleureux.",service3:"Contact facile",service3d:"Écrivez-nous sur WhatsApp.",service4:"À Atbara",service4d:"Un point de départ pour votre visite.",
+ galleryKicker:"En images",galleryTitle:"Découvrez le séjour",galleryIntro:"Photos illustratives d'espaces de style hôtelier.",ctaTitle:"Vous venez à Atbara ? Préparons votre séjour.",ctaText:"Envoyez vos dates et demandez les disponibilités.",ctaButton:"Commencer →",
+ contactKicker:"À votre écoute",contactTitle:"Contacter l'hôtel Farhan",contactIntro:"Pour réserver ou poser une question, écrivez-nous sur WhatsApp.",contactSideTitle:"Nous sommes à votre écoute",contactSideText:"Contactez-nous au sujet des chambres, des dates ou de votre arrivée.",addressLabel:"Adresse",addressText:"Atbara, État du Nil, Soudan",bookingLabel:"Réservations",bookingText:"Demandes via WhatsApp",replyLabel:"Contact",replyText:"Message direct",nameLabel:"Nom",phoneLabel:"Téléphone (facultatif)",topicLabel:"Type de demande",topicBooking:"Réservation",topicInfo:"Question générale",topicFamily:"Séjour familial",messageLabel:"Votre message",sendWhatsApp:"Envoyer sur WhatsApp ↗",footerText:"Hospitalité soudanaise au cœur d'Atbara.",rights:"Tous droits réservés",
+ msgBooking:"Bonjour, je souhaite réserver à l'hôtel Farhan.\nArrivée : ",msgOut:"\nDépart : ",msgGuests:"\nVoyageurs : ",msgRoom:"Bonjour, je souhaite des informations sur ",msgName:"\nNom : ",msgPhone:"\nTéléphone : ",msgTopic:"\nType : ",msgText:"\nDétails : ",topicNames:{booking:"Réservation",info:"Question générale",family:"Séjour familial"},dateError:"Choisissez un départ après l'arrivée.",fillName:"Veuillez saisir votre nom."
+},
+tr:{
+ brand:"Farhan Otel",navAbout:"Hakkında",navRooms:"Odalar",navServices:"Hizmetler",navGallery:"Galeri",navContact:"İletişim",bookNow:"Konaklama Ayırt",eyebrow:"Gerçek Sudan Misafirperverliği • Atbara",heroTitle:'Konaklamanız<br><span>konforla</span> başlasın',heroText:"Farhan Otel'e hoş geldiniz. Konfor ve Sudan misafirperverliği Atbara ziyaretinizi güzelleştirir.",heroCta:"Konaklamayı planla",exploreRooms:"Odaları keşfet",stat1:"Konfor ve huzur",stat1s:"Dinlenmek için alan",stat2:"Sıcak karşılama",stat2s:"İçten misafirperverlik",stat3:"Doğrudan rezervasyon",stat3s:"Kolay ve hızlı iletişim",checkin:"Giriş tarihi",checkout:"Çıkış tarihi",guests:"Misafirler",checkAvailability:"Rezervasyon sor →",badgeText:"Atbara'ya hoş geldiniz",
+ aboutKicker:"İkinci evinize hoş geldiniz",aboutTitle:"Sudan sıcaklığında misafirperverlik",aboutP1:"Farhan Otel'de rahat bir ortam, samimi karşılama ve dinlenebileceğiniz bir konaklama sunmayı amaçlıyoruz.",aboutP2:"İş veya aile ziyaretiniz için bize yazın; size uygun odayı seçmenize yardımcı olalım.",check1:"Rahat ortam",check2:"Detaylara özen",check3:"Doğrudan iletişim",check4:"Bireysel ve aile konaklaması",contactUs:"İletişim",
+ roomsKicker:"Konaklamanızı seçin",roomsTitle:"Konforunuz için odalar",roomsIntro:"Seçenekleri inceleyin ve ayrıntıları doğrulamak için bize ulaşın.",roomTag1:"Rahat konaklama",roomTag2:"İki kişi için",roomTag3:"Daha fazla alan",room1:"Tek Kişilik Oda",room1d:"Tek seyahat edenler için sakin ve kullanışlı bir seçenek.",room2:"Çift Kişilik Oda",room2d:"Atbara ziyaretinizde iki kişi için rahat bir seçenek.",room3:"Aile Süiti",room3d:"Daha fazla alan ve mahremiyet isteyen aileler için.",featBed:"🛏 Rahat yatak",featBed2:"🛏 İki yatak",featAc:"❄ Klima",featBath:"Banyo",featSpace:"Geniş alan",featFamily:"Aileye uygun",requestRoom:"Odayı sor",
+ servicesKicker:"Önemli ayrıntılar",servicesTitle:"Daha kolay bir konaklama",servicesIntro:"İlk mesajınızdan ayrılışınıza kadar size yardımcı olmak istiyoruz.",service1:"Rahat ortam",service1d:"Dinlenmek için odalar.",service2:"Sudan misafirperverliği",service2d:"Sıcak karşılama.",service3:"Kolay iletişim",service3d:"WhatsApp üzerinden yazın.",service4:"Atbara'da",service4d:"Şehir ziyaretiniz için uygun konum.",
+ galleryKicker:"Fotoğraflarla",galleryTitle:"Konaklamayı keşfedin",galleryIntro:"Otel tarzı alanlardan örnek fotoğraflar.",ctaTitle:"Atbara'ya mı geliyorsunuz? Konaklamanıza yardımcı olalım.",ctaText:"Tarihlerinizi gönderin ve oda durumunu sorun.",ctaButton:"Rezervasyona başla →",
+ contactKicker:"Yardımcı olmak için buradayız",contactTitle:"Farhan Otel ile iletişim",contactIntro:"Rezervasyon ve sorularınız için WhatsApp üzerinden yazın.",contactSideTitle:"Bize ulaşın",contactSideText:"Odalar, tarihler veya varış öncesi sorularınız için yazın.",addressLabel:"Adres",addressText:"Atbara, Nil Eyaleti, Sudan",bookingLabel:"Rezervasyon",bookingText:"WhatsApp üzerinden talep gönderin",replyLabel:"İletişim",replyText:"Doğrudan mesaj",nameLabel:"Ad",phoneLabel:"Telefon (isteğe bağlı)",topicLabel:"Talep türü",topicBooking:"Oda rezervasyonu",topicInfo:"Genel soru",topicFamily:"Aile konaklaması",messageLabel:"Mesajınız",sendWhatsApp:"WhatsApp ile gönder ↗",footerText:"Atbara'nın kalbinde Sudan misafirperverliği.",rights:"Tüm hakları saklıdır",
+ msgBooking:"Merhaba, Farhan Otel'de rezervasyon hakkında bilgi almak istiyorum.\nGiriş: ",msgOut:"\nÇıkış: ",msgGuests:"\nMisafir: ",msgRoom:"Merhaba, şu konuda bilgi almak istiyorum: ",msgName:"\nAd: ",msgPhone:"\nTelefon: ",msgTopic:"\nTalep: ",msgText:"\nAyrıntılar: ",topicNames:{booking:"Oda rezervasyonu",info:"Genel soru",family:"Aile konaklaması"},dateError:"Çıkış tarihi giriş tarihinden sonra olmalı.",fillName:"Lütfen önce adınızı yazın."
+},
+es:{
+ brand:"Hotel Farhan",navAbout:"Nosotros",navRooms:"Habitaciones",navServices:"Servicios",navGallery:"Galería",navContact:"Contacto",bookNow:"Reservar estancia",eyebrow:"Hospitalidad sudanesa • Atbara",heroTitle:'Tu estancia comienza<br>con <span>el confort</span>',heroText:"Bienvenido al Hotel Farhan, donde la comodidad y la hospitalidad sudanesa hacen que tu visita a Atbara sea especial.",heroCta:"Planifica tu estancia",exploreRooms:"Ver habitaciones",stat1:"Calma y confort",stat1s:"Un espacio para descansar",stat2:"Cálida bienvenida",stat2s:"Hospitalidad sincera",stat3:"Reserva directa",stat3s:"Contacto fácil y rápido",checkin:"Llegada",checkout:"Salida",guests:"Huéspedes",checkAvailability:"Consultar reserva →",badgeText:"Bienvenido a Atbara",
+ aboutKicker:"Bienvenido a tu segundo hogar",aboutTitle:"Hospitalidad con calidez sudanesa",aboutP1:"En el Hotel Farhan buscamos ofrecer un ambiente cómodo, una bienvenida amable y un lugar para descansar después de un día largo.",aboutP2:"Para viajes de trabajo o familiares, envíanos tu solicitud y te ayudaremos a elegir una habitación.",check1:"Ambiente cómodo",check2:"Atención al detalle",check3:"Contacto directo",check4:"Para viajeros y familias",contactUs:"Contáctanos",
+ roomsKicker:"Elige tu estancia",roomsTitle:"Habitaciones para tu comodidad",roomsIntro:"Explora las opciones y envíanos tu solicitud para confirmar los detalles.",roomTag1:"Estancia cómoda",roomTag2:"Para dos personas",roomTag3:"Más espacio",room1:"Habitación individual",room1d:"Una opción práctica y tranquila para quienes viajan solos.",room2:"Habitación doble",room2d:"Una opción cómoda para dos personas durante tu visita a Atbara.",room3:"Suite familiar",room3d:"Para familias que buscan más espacio y privacidad.",featBed:"🛏 Cama cómoda",featBed2:"🛏 Dos camas",featAc:"❄ Aire acondicionado",featBath:"Baño",featSpace:"Más espacio",featFamily:"Para familias",requestRoom:"Consultar habitación",
+ servicesKicker:"Detalles importantes",servicesTitle:"Una estancia más fácil",servicesIntro:"Queremos ayudarte desde el primer mensaje hasta el final de tu visita.",service1:"Ambiente cómodo",service1d:"Habitaciones para descansar.",service2:"Hospitalidad sudanesa",service2d:"Una bienvenida amable.",service3:"Contacto fácil",service3d:"Escríbenos por WhatsApp.",service4:"En Atbara",service4d:"Una base práctica para visitar la ciudad.",
+ galleryKicker:"En imágenes",galleryTitle:"Descubre la estancia",galleryIntro:"Fotos ilustrativas de espacios de estilo hotelero.",ctaTitle:"¿Vienes a Atbara? Te ayudamos con tu estancia.",ctaText:"Envía tus fechas y consulta la disponibilidad.",ctaButton:"Empezar reserva →",
+ contactKicker:"Estamos para ayudarte",contactTitle:"Contacta con Hotel Farhan",contactIntro:"Para reservas o consultas, envíanos un mensaje por WhatsApp.",contactSideTitle:"Nos encantará ayudarte",contactSideText:"Pregúntanos sobre habitaciones, fechas o detalles antes de llegar.",addressLabel:"Dirección",addressText:"Atbara, Estado del Nilo, Sudán",bookingLabel:"Reservas",bookingText:"Consultas por WhatsApp",replyLabel:"Contacto",replyText:"Mensaje directo",nameLabel:"Nombre",phoneLabel:"Teléfono (opcional)",topicLabel:"Tipo de consulta",topicBooking:"Reservar habitación",topicInfo:"Consulta general",topicFamily:"Estancia familiar",messageLabel:"Tu mensaje",sendWhatsApp:"Enviar por WhatsApp ↗",footerText:"Hospitalidad sudanesa en el corazón de Atbara.",rights:"Todos los derechos reservados",
+ msgBooking:"Hola, quisiera consultar una reserva en Hotel Farhan.\nLlegada: ",msgOut:"\nSalida: ",msgGuests:"\nHuéspedes: ",msgRoom:"Hola, quisiera consultar sobre ",msgName:"\nNombre: ",msgPhone:"\nTeléfono: ",msgTopic:"\nTipo: ",msgText:"\nDetalles: ",topicNames:{booking:"Reservar habitación",info:"Consulta general",family:"Estancia familiar"},dateError:"La salida debe ser posterior a la llegada.",fillName:"Escribe tu nombre primero."
+}
+};
+
+let currentLang = "ar";
+const $ = (s, root=document) => root.querySelector(s);
+const $$ = (s, root=document) => [...root.querySelectorAll(s)];
+function tr(key){return translations[currentLang][key] ?? translations.ar[key] ?? key}
+function applyLanguage(lang){
+ currentLang = translations[lang] ? lang : "ar";
+ const dict = translations[currentLang];
+ document.documentElement.lang = currentLang;
+ document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+ $$("[data-i18n]").forEach(el=>{const key=el.dataset.i18n;if(dict[key]!==undefined)el.textContent=dict[key]});
+ $$("[data-i18n-html]").forEach(el=>{const key=el.dataset.i18nHtml;if(dict[key]!==undefined)el.innerHTML=dict[key]});
+ $("#language").value=currentLang;
+ document.title = dict.brand + (currentLang==="ar" ? " | عطبرة" : " | Atbara");
+ $("#menuBtn").setAttribute("aria-label",currentLang==="ar"?"القائمة":"Menu");
+}
+function waLink(message){return "https://wa.me/"+HOTEL_WHATSAPP+"?text="+encodeURIComponent(message)}
+function openWhatsApp(message){
+ if(!/^\d{8,15}$/.test(HOTEL_WHATSAPP) || HOTEL_WHATSAPP==="249000000000"){
+  showToast(currentLang==="ar"?"عدّل رقم واتساب الفندق داخل الكود أولاً (HOTEL_WHATSAPP).":"Please set the hotel's real WhatsApp number in the code first (HOTEL_WHATSAPP).");
+  return;
+ }
+ window.open(waLink(message),"_blank","noopener");
+}
+function showToast(msg){const t=$("#toast");t.textContent=msg;t.classList.add("show");clearTimeout(showToast.timer);showToast.timer=setTimeout(()=>t.classList.remove("show"),3200)}
+const today = new Date();today.setMinutes(today.getMinutes()-today.getTimezoneOffset());
+const todayString=today.toISOString().slice(0,10);
+$("#checkin").min=todayString;$("#checkout").min=todayString;
+$("#checkin").addEventListener("change",()=>{$("#checkout").min=$("#checkin").value||todayString;if($("#checkout").value && $("#checkout").value<=$("#checkin").value)$("#checkout").value=""});
+$("#bookingForm").addEventListener("submit",e=>{
+ e.preventDefault();const ci=$("#checkin").value,co=$("#checkout").value;
+ if(!ci||!co||co<=ci){showToast(tr("dateError"));return}
+ openWhatsApp(tr("msgBooking")+ci+tr("msgOut")+co+tr("msgGuests")+$("#guests").value);
+});
+$$(".chooseRoom").forEach(btn=>btn.addEventListener("click",()=>{
+ const key=btn.dataset.room;const room=tr(key);
+ openWhatsApp(tr("msgRoom")+room+".");
+}));
+$("#contactForm").addEventListener("submit",e=>{
+ e.preventDefault();const name=$("#name").value.trim();if(!name){showToast(tr("fillName"));return}
+ const topic=$("#topic").value;const topicName=tr("topicNames")[topic]||topic;
+ const message=tr("msgName")+name+($("#phone").value.trim()?tr("msgPhone")+$("#phone").value.trim():"")+tr("msgTopic")+topicName+($("#message").value.trim()?tr("msgText")+$("#message").value.trim():"");
+ openWhatsApp(message);
+});
+$("#language").addEventListener("change",e=>applyLanguage(e.target.value));
+$("#menuBtn").addEventListener("click",()=>$("#navlinks").classList.toggle("open"));
+$$("#navlinks a").forEach(a=>a.addEventListener("click",()=>$("#navlinks").classList.remove("open")));
+window.addEventListener("scroll",()=>$("#nav").classList.toggle("scrolled",window.scrollY>35),{passive:true});
+$("#waFloat").addEventListener("click",e=>{e.preventDefault();openWhatsApp(currentLang==="ar"?"السلام عليكم، أود الاستفسار عن الإقامة في فندق فرحان.":"Hello, I would like to ask about staying at Farhan Hotel.")});
+$("#year").textContent=new Date().getFullYear();
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target)}}),{threshold:.12});
+$$(".reveal").forEach(el=>observer.observe(el));
+$$(".gallery button img").forEach(img=>img.parentElement.addEventListener("click",()=>{$("#lightboxImg").src=img.src;$("#lightbox").classList.add("open")}));
+$("#closeLightbox").addEventListener("click",()=>$("#lightbox").classList.remove("open"));
+$("#lightbox").addEventListener("click",e=>{if(e.target.id==="lightbox")$("#lightbox").classList.remove("open")});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")$("#lightbox").classList.remove("open")});
+applyLanguage("ar");
+</script>
+</body>
+</html>
